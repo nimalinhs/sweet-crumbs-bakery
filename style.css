@@ -310,3 +310,68 @@ img {
     max-width: 450px;
     border-radius: 10px;
 }
+
+/* Day 14 - Customer Reviews Styling */
+
+#reviews {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff0f5;
+}
+
+#reviews h2 {
+    color: #8b3a62;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+#reviewForm {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#reviewForm label {
+    text-align: left;
+    color: #8b3a62;
+    font-weight: bold;
+}
+
+#reviewForm input,
+#reviewForm select,
+#reviewForm textarea {
+    padding: 12px;
+    border: 1px solid #e5a4bd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#reviewForm textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#reviewForm button {
+    background-color: #d86b98;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#reviewForm button:hover {
+    background-color: #b94e7b;
+}
+
+.review-card {
+    background-color: white;
+    padding: 18px;
+    margin: 15px auto;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
