@@ -118,3 +118,41 @@ function clearCart() {
     updateCart();
 
 }
+
+
+const reviewForm = document.getElementById("reviewForm");
+const reviewList = document.getElementById("reviewList");
+
+reviewForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value.trim();
+    const rating = document.getElementById("rating").value;
+    const message = document.getElementById("reviewMessage").value.trim();
+
+    if (!name || !rating || !message) {
+        alert("Please complete all fields!");
+        return;
+    }
+
+    const reviewCard = document.createElement("div");
+
+    reviewCard.className = "review-card";
+
+    const customer = document.createElement("h3");
+    customer.textContent = name;
+
+    const stars = document.createElement("p");
+    stars.textContent = "⭐".repeat(Number(rating));
+
+    const review = document.createElement("p");
+    review.textContent = message;
+
+    reviewCard.append(customer, stars, review);
+    reviewList.appendChild(reviewCard);
+
+    reviewForm.reset();
+
+    alert("Thank you for your review!");
+});
